@@ -2,4 +2,4 @@
 
 ## _A project for the course 20/8661 IFCT092PO PROGRAMACIÓN WEB CON SOFTWARE LIBRE of Community of Madrid_
 
-[Build Status](https://github.com/AdornaRuiz/ProgramacionWebCM)
+[![GitHub version](https://badge.fury.io/gh/conventional-changelog%2Fstandard-version.svg)](https://badge.fury.io/gh/conventional-changelog%2Fstandard-version)
