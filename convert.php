@@ -1,7 +1,7 @@
 <?php
     /*
     ** Full code available at https://github.com/AdornaRuiz/ProgramacionWebCM
-    ** Live test available at https://webcm.adornapps.com
+    ** Live test available at https://calculatron.adornapps.com
     */
     function send_error($error) {
         $response = array(
