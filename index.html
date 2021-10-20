@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=no"
+		/>
+		<script src="./src/index.js"></script>
+		<link rel="stylesheet" href="./src/index.css" />
+		<title>TimeConverter</title>
+	</head>
+	<body>
+		<head>
+			<h1>Calculatron</h1>
+		</head>
+		<div>
+			<h3>Convert seconds to minutes, hours and days</h3>
+			<div id="div__error"></div>
+			<form
+				action="http://localhost/TimeConverter/convert.php?type=time"
+				method="post"
+				id="form__time"
+			>
+				<label for="seconds">Segundos</label>
+				<input
+					required
+					type="number"
+					name="seconds"
+					id="seconds"
+					min="0"
+					placeholder="Segundos"
+				/>
+				<input type="submit" value="Convertir" />
+			</form>
+		</div>
+		<div>
+			<h3>Calculate area and perimeter of a circle</h3>
+			<form
+				action="http://localhost/TimeConverter/convert.php?type=circle"
+				method="post"
+				id="form__circle"
+			>
+				<label for="radius">Radio</label>
+				<input
+					required
+					type="number"
+					step="0.01"
+					name="radius"
+					id="radius"
+					min="0"
+					placeholder="Radio"
+				/>
+				<input type="submit" value="Calculate" />
+			</form>
+		</div>
+		<div>
+			<h3>Calculate area an perimeter for a triangle</h3>
+			<form
+				action="http://localhost/TimeConverter/convert.php?type=triangle"
+				method="post"
+				id="form__triangle"
+			>
+				<label for="side1">Lado 1</label>
+				<input
+					required
+					type="number"
+					step="0.01"
+					name="side1"
+					id="side1"
+					min="0"
+					placeholder="Lado 1"
+				/>
+				<label for="side2">Lado 2</label>
+				<input
+					required
+					type="number"
+					step="0.01"
+					name="side2"
+					id="side2"
+					min="0"
+					placeholder="Lado 2"
+				/>
+				<label for="side3">Lado 3</label>
+				<input
+					required
+					type="number"
+					step="0.01"
+					name="side3"
+					id="side3"
+					min="0"
+					placeholder="Lado 3"
+				/>
+				<input type="submit" value="Calculate" />
+			</form>
+		</div>
+	</body>
+</html>
