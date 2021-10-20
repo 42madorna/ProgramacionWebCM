@@ -1,6 +1,15 @@
 "use strict"
 
-const processTimeForm = (e) => {
+const setError = (error) => {
+	if (!error) return
+	const div__error = document.getElementById("div__error")
+	div__error.innerHTML = `<p class="error">${error}</p>`
+	setInterval(() => {
+		div__error.innerHTML = ""
+	}, 5000)
+}
+
+const processTimeForm = async (e) => {
 	if (e.preventDefault) e.preventDefault()
 
 	const div__error = document.getElementById("div__error")
@@ -25,19 +34,31 @@ const processTimeForm = (e) => {
 		body: urlencoded,
 	}
 
-	fetch(
-		"http://localhost/TimeConverter/convert.php?type=time",
-		requestOptions
-	)
-		.then((response) => response.json())
-		.then((result) => {
+	try {
+		const request = await fetch(
+			"http://localhost/TimeConverter/convert.php?type=time",
+			requestOptions
+		)
+		if (request.status == 200) {
+			const result = await request.json()
 			console.log(result)
-		})
+			const div__result_time = document.getElementById("div__result_time")
+			div__result_time.innerHTML = `<p>Seconds: ${result.seconds}</p>`
+			div__result_time.innerHTML += `<p>Minutes: ${result.minutes}</p>`
+			div__result_time.innerHTML += `<p>Hours: ${result.hours}</p>`
+			div__result_time.innerHTML += `<p>Days: ${result.days}</p>`
+			return false
+		}
+		const result = await request.json()
+		setError(result.error)
+	} catch (e) {
+		console.error(e)
+	}
 
 	return false
 }
 
-const processCircleForm = (e) => {
+const processCircleForm = async (e) => {
 	if (e.preventDefault) e.preventDefault()
 
 	const div__error = document.getElementById("div__error")
@@ -62,19 +83,30 @@ const processCircleForm = (e) => {
 		body: urlencoded,
 	}
 
-	fetch(
-		"http://localhost/TimeConverter/convert.php?type=circle",
-		requestOptions
-	)
-		.then((response) => response.json())
-		.then((result) => {
+	try {
+		const request = await fetch(
+			"http://localhost/TimeConverter/convert.php?type=circle",
+			requestOptions
+		)
+		if (request.status == 200) {
+			const result = await request.json()
 			console.log(result)
-		})
+			const div__result_circle =
+				document.getElementById("div__result_circle")
+			div__result_circle.innerHTML = `<p>Area: ${result.area}</p>`
+			div__result_circle.innerHTML += `<p>Perimeter: ${result.length}</p>`
+			return false
+		}
+		const result = await request.json()
+		setError(result.error)
+	} catch (e) {
+		console.error(e)
+	}
 
 	return false
 }
 
-const processTriangleForm = (e) => {
+const processTriangleForm = async (e) => {
 	if (e.preventDefault) e.preventDefault()
 
 	const div__error = document.getElementById("div__error")
@@ -103,14 +135,26 @@ const processTriangleForm = (e) => {
 		body: urlencoded,
 	}
 
-	fetch(
-		"http://localhost/TimeConverter/convert.php?type=triangle",
-		requestOptions
-	)
-		.then((response) => response.json())
-		.then((result) => {
+	try {
+		const request = await fetch(
+			"http://localhost/TimeConverter/convert.php?type=triangle",
+			requestOptions
+		)
+		if (request.status == 200) {
+			const result = await request.json()
 			console.log(result)
-		})
+			const div__result_triangle = document.getElementById(
+				"div__result_triangle"
+			)
+			div__result_triangle.innerHTML = `<p>Area: ${result.area}</p>`
+			div__result_triangle.innerHTML += `<p>Perimeter: ${result.length}</p>`
+			return false
+		}
+		const result = await request.json()
+		setError(result.error)
+	} catch (e) {
+		console.error(e)
+	}
 
 	return false
 }

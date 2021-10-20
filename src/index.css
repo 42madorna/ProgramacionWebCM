@@ -1,3 +1,17 @@
+:root {
+	--bg-color: #fafafa;
+	--general-text-color: #0e0e0e;
+	--shadow: #3d3d3d;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-color: #323232;
+		--general-text-color: #fafafa;
+		--shadow: #181818;
+	}
+}
+
 html,
 body {
 	margin: 0;
@@ -7,13 +21,81 @@ body {
 
 body {
 	min-height: 100%;
+	background: var(--bg-color);
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
 }
 
 h1 {
 	margin: 0;
 	padding: 20px 0;
+	position: absolute;
+	left: 20px;
+	top: 0;
 }
 
-#div__error {
+h1,
+h3,
+p,
+label {
+	color: var(--general-text-color);
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+input {
+	width: 79%;
+	border-radius: 10px;
+	border: 0;
+	height: 35px;
+	margin: 10px 0 0 0;
+	outline: none;
+}
+
+input[type="submit"] {
+	margin: 25px 0 0 0;
+	width: 81%;
+	background-image: linear-gradient(120deg, #31014f, #b53a00);
+	color: #fafafa;
+	text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+	box-shadow: var(--shadow) 5px 5px 5px;
+	cursor: pointer;
+}
+
+input[type="number"] {
+	padding-left: 2%;
+}
+
+label {
+	margin: 10px 0 0 0;
+}
+
+.error {
+	position: absolute;
+	top: 15%;
+	left: 25%;
 	background: #ff0000;
+	height: 35px;
+	width: 50%;
+	margin: auto;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	align-self: center;
+	justify-self: center;
+	color: #fafafa;
+	font-size: 1.4em;
 }

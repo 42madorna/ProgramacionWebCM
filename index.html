@@ -15,9 +15,9 @@
 		<head>
 			<h1>Calculatron</h1>
 		</head>
-		<div>
+		<div id="div__error"></div>
+		<div id="div__seconds">
 			<h3>Convert seconds to minutes, hours and days</h3>
-			<div id="div__error"></div>
 			<form
 				action="http://localhost/TimeConverter/convert.php?type=time"
 				method="post"
@@ -34,15 +34,16 @@
 				/>
 				<input type="submit" value="Convertir" />
 			</form>
+			<div id="div__result_time"></div>
 		</div>
-		<div>
+		<div id="div__circle">
 			<h3>Calculate area and perimeter of a circle</h3>
 			<form
 				action="http://localhost/TimeConverter/convert.php?type=circle"
 				method="post"
 				id="form__circle"
 			>
-				<label for="radius">Radio</label>
+				<label for="radius">Radio del círculo</label>
 				<input
 					required
 					type="number"
@@ -54,9 +55,10 @@
 				/>
 				<input type="submit" value="Calculate" />
 			</form>
+			<div id="div__result_circle"></div>
 		</div>
-		<div>
-			<h3>Calculate area an perimeter for a triangle</h3>
+		<div id="div__triangle">
+			<h3>Calculate area and perimeter for a triangle</h3>
 			<form
 				action="http://localhost/TimeConverter/convert.php?type=triangle"
 				method="post"
@@ -94,6 +96,7 @@
 				/>
 				<input type="submit" value="Calculate" />
 			</form>
+			<div id="div__result_triangle"></div>
 		</div>
 	</body>
 </html>
