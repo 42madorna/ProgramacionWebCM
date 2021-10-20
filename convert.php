@@ -12,7 +12,7 @@
     }
 
     /*
-    ** POST ?/convert.php?type=time
+    ** POST /convert.php?type=time
     ** body as x-www-form-urlencoded:
     **  seconds: value in seconds to convert
     */
@@ -33,7 +33,7 @@
     }
 
     /*
-    ** POST ?/convert.php?type=circle
+    ** POST /convert.php?type=circle
     ** body as x-www-form-urlencoded:
     **  radius
     */
@@ -51,7 +51,7 @@
     }
 
     /*
-    ** POST ?/convert.php?type=triangle
+    ** POST /convert.php?type=triangle
     ** body as x-www-form-urlencoded:
     **  side[1,2,3]
     */
