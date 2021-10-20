@@ -36,7 +36,7 @@ const processTimeForm = async (e) => {
 
 	try {
 		const request = await fetch(
-			"http://localhost/TimeConverter/convert.php?type=time",
+			"https://calculatron.adornapps.com/convert.php?type=time",
 			requestOptions
 		)
 		if (request.status == 200) {
@@ -85,7 +85,7 @@ const processCircleForm = async (e) => {
 
 	try {
 		const request = await fetch(
-			"http://localhost/TimeConverter/convert.php?type=circle",
+			"https://calculatron.adornapps.com/convert.php?type=circle",
 			requestOptions
 		)
 		if (request.status == 200) {
@@ -137,7 +137,7 @@ const processTriangleForm = async (e) => {
 
 	try {
 		const request = await fetch(
-			"http://localhost/TimeConverter/convert.php?type=triangle",
+			"https://calculatron.adornapps.com/convert.php?type=triangle",
 			requestOptions
 		)
 		if (request.status == 200) {
