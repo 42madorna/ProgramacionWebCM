@@ -62,7 +62,9 @@ API endpoints for this project are the following:
 
 -   POST /convert.php?type=triangle
     -   body:
-        -   side[1,2,3]: (float) side length
+        -   side1: (float) side1 length
+        -   side2: (float) side2 length
+        -   side3: (float) side3 length
     -   response:
         -   area: (float) triangle area
         -   length: (float) sum of the tree sides given
