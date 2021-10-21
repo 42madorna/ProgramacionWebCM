@@ -36,6 +36,7 @@ body {
 		align-items: center;
 		flex-wrap: nowrap;
 		justify-content: flex-start;
+		margin: 100px 0;
 	}
 }
 
@@ -58,6 +59,11 @@ label {
 form {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
+	align-content: center;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
 }
 
 input {
@@ -87,7 +93,8 @@ input[type="number"] {
 }
 
 label {
-	margin: 10px 0 0 0;
+	align-self: flex-start;
+	margin: 10px 0 0 40px;
 }
 
 .error {
@@ -107,4 +114,10 @@ label {
 	justify-self: center;
 	color: #fafafa;
 	font-size: 1.4em;
+}
+
+#div__error {
+	position: absolute;
+	top: 15%;
+	left: 25%;
 }
