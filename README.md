@@ -68,3 +68,10 @@ API endpoints for this project are the following:
     -   response:
         -   area: (float) triangle area
         -   length: (float) sum of the tree sides given
+
+## Conclusion
+
+This as my first PHP project was funny to do. It was a nice challenge to complete and
+the triangle one complexity was amazing because it helps improving some error management you
+won't think at a first instance.  
+Feel free to contact me for some improvements, I'd be glad to hear from you!
