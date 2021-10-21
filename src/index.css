@@ -99,12 +99,10 @@ label {
 
 .error {
 	position: absolute;
-	top: 15%;
 	left: 25%;
 	background: #ff0000;
-	height: 35px;
+	height: 50px;
 	width: 50%;
-	margin: auto;
 	border-radius: 10px;
 	display: flex;
 	align-items: center;
@@ -119,5 +117,5 @@ label {
 #div__error {
 	position: absolute;
 	top: 15%;
-	left: 25%;
+	width: 100%;
 }
