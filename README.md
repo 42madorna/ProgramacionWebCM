@@ -43,10 +43,26 @@ is sent and the returned JSON will contain the error information inside of it.
 API endpoints for this project are the following:
 
 -   POST /convert.php?type=time
+
     -   body:
-        -   seconds: (int)value in seconds
+        -   seconds: (int) value in seconds
     -   response:
-        -   seconds: (int)value in seconds
-        -   minutes: (int)seconds value converted into minutes
-        -   hours: (int)seconds value converted into hours
-        -   days: (int)seconds value converted into hours
+        -   seconds: (int) value in seconds
+        -   minutes: (int) seconds value converted into minutes
+        -   hours: (int) seconds value converted into hours
+        -   days: (int) seconds value converted into hours
+
+-   POST /convert.php?type=circle
+
+    -   body:
+        -   radius: (float) radius length
+    -   response:
+        -   area: (float) circle area
+        -   length: (float) circle length
+
+-   POST /convert.php?type=triangle
+    -   body:
+        -   side[1,2,3]: (float) side length
+    -   response:
+        -   area: (float) triangle area
+        -   length: (float) sum of the tree sides given
