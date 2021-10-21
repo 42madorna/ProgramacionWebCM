@@ -1,5 +1,5 @@
 :root {
-	--bg-color: #fafafa;
+	--bg-color: #dfdfdf;
 	--general-text-color: #0e0e0e;
 	--shadow: #3d3d3d;
 }
@@ -30,6 +30,16 @@ body {
 	flex-wrap: nowrap;
 }
 
+@media (max-width: 900px) {
+	body {
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		margin: 100px 0;
+	}
+}
+
 h1 {
 	margin: 0;
 	padding: 20px 0;
@@ -49,6 +59,11 @@ label {
 form {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
+	align-content: center;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
 }
 
 input {
@@ -78,17 +93,16 @@ input[type="number"] {
 }
 
 label {
-	margin: 10px 0 0 0;
+	align-self: flex-start;
+	margin: 10px 0 0 40px;
 }
 
 .error {
 	position: absolute;
-	top: 15%;
 	left: 25%;
 	background: #ff0000;
-	height: 35px;
+	height: 50px;
 	width: 50%;
-	margin: auto;
 	border-radius: 10px;
 	display: flex;
 	align-items: center;
@@ -98,4 +112,10 @@ label {
 	justify-self: center;
 	color: #fafafa;
 	font-size: 1.4em;
+}
+
+#div__error {
+	position: absolute;
+	top: 15%;
+	width: 100%;
 }
