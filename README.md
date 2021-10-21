@@ -44,7 +44,7 @@ API endpoints for this project are the following:
 
 -   POST /convert.php?type=time  
      body:
-    -   seconds: (int)value in seconds  
+    -   seconds: (int)value in seconds
         response:
     -   seconds: (int)value in seconds
     -   minutes: (int)seconds value converted into minutes
