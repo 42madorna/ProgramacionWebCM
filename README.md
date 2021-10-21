@@ -42,11 +42,11 @@ is sent and the returned JSON will contain the error information inside of it.
 
 API endpoints for this project are the following:
 
--   POST /convert.php?type=time  
-     body:
-    -   seconds: (int)value in seconds
-        response:
-    -   seconds: (int)value in seconds
-    -   minutes: (int)seconds value converted into minutes
-    -   hours: (int)seconds value converted into hours
-    -   days: (int)seconds value converted into hours
+-   POST /convert.php?type=time
+    -   body:
+        -   seconds: (int)value in seconds
+    -   response:
+        -   seconds: (int)value in seconds
+        -   minutes: (int)seconds value converted into minutes
+        -   hours: (int)seconds value converted into hours
+        -   days: (int)seconds value converted into hours
